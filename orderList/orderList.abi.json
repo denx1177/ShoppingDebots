@@ -1,0 +1,61 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"pubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "createOrder",
+			"inputs": [
+				{"name":"text","type":"bytes"},
+				{"name":"number","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "updateOrder",
+			"inputs": [
+				{"name":"id","type":"uint32"},
+				{"name":"cost","type":"uint64"},
+				{"name":"done","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deleteOrder",
+			"inputs": [
+				{"name":"id","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getOrderList",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"id","type":"uint32"},{"name":"text","type":"bytes"},{"name":"number","type":"uint32"},{"name":"createdAt","type":"uint64"},{"name":"isPaid","type":"bool"},{"name":"cost","type":"uint64"}],"name":"orderList","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "getStat",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"paidCount","type":"uint32"},{"name":"unpaidCount","type":"uint32"},{"name":"paidSum","type":"uint64"}],"name":"stat","type":"tuple"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}
